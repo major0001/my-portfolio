@@ -1,76 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex Mutune | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
+
 <body>
   <header>
-    <nav>
-      <h1>Alex Mutune</h1>
-      <ul>
+    <div class="container">
+      <div class="logo">Alex Mutune</div>
+      <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
 
   <section id="hero">
-    <img src="assets/profile.jpg" alt="Alex Mutune Photo" />
-    <h2>Full-Stack Developer | Data Engineer | Network & Database Specialist</h2>
-    <p>Building reliable systems and smart AI tools that make tech work for people.</p>
+    <img src="SCALLED-IMAGE.png" alt="Alex Mutune" class="profile-pic">
+    <h2>Hi, I'm Alex Mutune</h2>
+    <div class="typing" id="typed"></div>
+    <p>Software Engineer | Data Enthusiast | Cybersecurity Learner</p>
   </section>
 
-  <section id="about">
+  <section id="about" class="container">
     <h2>About Me</h2>
-    <p>I’m a detail-oriented full-stack developer and data engineer with hands-on experience designing web apps, managing cloud infrastructure, and training AI systems. My background combines strong programming skills with a passion for solving complex data problems. I specialize in Python, JavaScript, SQL, cloud services, and network/database optimization. I enjoy contributing to open-source projects and mentoring junior developers.</p>
+    <p>
+      I'm a passionate and versatile software developer with experience in building full-stack applications, data-driven visualizations,
+      and secure digital systems. With a solid foundation in Computer Science and a strong interest in emerging tech,
+      I constantly explore innovative ways to solve problems. Whether it's creating user-friendly web apps, automating workflows,
+      or diving into machine learning and cybersecurity, I'm always ready to learn and build.
+      When I'm not coding, I enjoy contributing to open-source, mentoring, and writing technical blogs.
+    </p>
   </section>
 
-  <section id="projects">
-    <h2>Featured Projects</h2>
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+
     <div class="project">
-      <h3>1. Crypto Dashboard</h3>
-      <p>Real-time cryptocurrency price tracker using React.js and CoinGecko API.</p>
+      <h3>Reminder WebApp</h3>
+      <p>A productivity-focused web application that sends emotional yet effective task reminders to help users prioritize relationships and intentions. Built with Node.js, Express, and MongoDB.</p>
+      <a href="https://github.com/AlexMutune/ReminderWebApp" target="_blank">View on GitHub</a>
     </div>
+
     <div class="project">
-      <h3>2. Smart Budget Tracker</h3>
-      <p>Personal finance tool built with Flask and PostgreSQL. Includes analytics and visual reports.</p>
+      <h3>Transit Equity GIS Dashboard</h3>
+      <p>An interactive map built with QGIS and ArcGIS Pro showcasing disparities in public transportation access across Seattle, integrating GTFS, CDC SVI, and census data.</p>
+      <a href="https://github.com/AlexMutune/TransitEquityMap" target="_blank">View on GitHub</a>
     </div>
+
     <div class="project">
-      <h3>3. AI Chat Interface</h3>
-      <p>Interactive chatbot interface trained with custom logic for task automation.</p>
+      <h3>Cybersecurity Threat Visualizer</h3>
+      <p>Python and Flask-based dashboard that visualizes real-time cyber threat feeds and highlights critical vulnerabilities using CVE feeds and analytics.</p>
+      <a href="https://github.com/AlexMutune/CyberThreatVisualizer" target="_blank">View on GitHub</a>
     </div>
+
     <div class="project">
-      <h3>4. Network Health Monitor</h3>
-      <p>Monitors and logs server uptime and packet loss. Built with Bash, Python, and Grafana.</p>
+      <h3>SPSS Regression Toolkit</h3>
+      <p>Automates statistical regression analysis workflows using Python, SPSS scripting, and LaTeX export features. Useful for research-heavy academic tasks.</p>
+      <a href="https://github.com/AlexMutune/SPSS-Toolkit" target="_blank">View on GitHub</a>
     </div>
+
     <div class="project">
-      <h3>5. GitHub Actions CI/CD</h3>
-      <p>Custom GitHub Actions workflows to automate build/test/deploy for microservices.</p>
+      <h3>Globalization Interactive Map</h3>
+      <p>Web-based visualization platform that illustrates personal and community impacts of globalization through a narrative map. Built using Leaflet.js and custom GeoJSON layers.</p>
+      <a href="https://github.com/AlexMutune/GlobalizationMap" target="_blank">View on GitHub</a>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="container">
     <h2>Contact Me</h2>
-    <form action="#" method="post">
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Alex Mutune. All rights reserved.</p>
+    &copy; 2025 Alex Mutune | Connect on <a href="https://www.linkedin.com/in/alex-mutune-17b7111a0/" target="_blank">LinkedIn</a>
   </footer>
 </body>
+
 </html>
