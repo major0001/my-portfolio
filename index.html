@@ -2,28 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alex Mutune | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 
 <body>
   <header>
-    <div class="container">
+    <div class="container header-container">
       <div class="logo">Alex Mutune</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="darkToggle" title="Toggle Dark Mode">🌓</button>
+      </nav>
     </div>
   </header>
 
   <section id="hero">
-    <img src="assets/profile.jpg" alt="Alex Mutune" class="profile-pic">
-    <h2>Hi, I'm Alex Mutune</h2>
+    <img src="assets/profile.jpg" alt="Alex Mutune" class="profile-pic" />
+    <h1>Hi, I'm Alex Mutune</h1>
     <div class="typing" id="typed"></div>
     <p>Software Engineer | Data Enthusiast | Cybersecurity Learner</p>
   </section>
@@ -31,11 +34,14 @@
   <section id="about" class="container">
     <h2>About Me</h2>
     <p>
-      I'm a passionate and versatile software developer with experience in building full-stack applications, data-driven visualizations,
-      and secure digital systems. With a solid foundation in Computer Science and a strong interest in emerging tech,
-      I constantly explore innovative ways to solve problems. Whether it's creating user-friendly web apps, automating workflows,
-      or diving into machine learning and cybersecurity, I'm always ready to learn and build.
-      When I'm not coding, I enjoy contributing to open-source, mentoring, and writing technical blogs.
+      I'm a passionate and versatile software developer with experience in
+      building full-stack applications, data-driven visualizations, and secure
+      digital systems. With a solid foundation in Computer Science and a strong
+      interest in emerging tech, I constantly explore innovative ways to solve
+      problems. Whether it's creating user-friendly web apps, automating
+      workflows, or diving into machine learning and cybersecurity, I'm always
+      ready to learn and build. When I'm not coding, I enjoy contributing to
+      open-source, mentoring, and writing technical blogs.
     </p>
   </section>
 
@@ -44,31 +50,51 @@
 
     <div class="project">
       <h3>Reminder WebApp</h3>
-      <p>A productivity-focused web application that sends emotional yet effective task reminders to help users prioritize relationships and intentions. Built with Node.js, Express, and MongoDB.</p>
+      <p>
+        A productivity-focused web application that sends emotional yet
+        effective task reminders to help users prioritize relationships and
+        intentions. Built with Node.js, Express, and MongoDB.
+      </p>
       <a href="https://github.com/AlexMutune/ReminderWebApp" target="_blank">View on GitHub</a>
     </div>
 
     <div class="project">
       <h3>Transit Equity GIS Dashboard</h3>
-      <p>An interactive map built with QGIS and ArcGIS Pro showcasing disparities in public transportation access across Seattle, integrating GTFS, CDC SVI, and census data.</p>
+      <p>
+        An interactive map built with QGIS and ArcGIS Pro showcasing disparities
+        in public transportation access across Seattle, integrating GTFS, CDC
+        SVI, and census data.
+      </p>
       <a href="https://github.com/AlexMutune/TransitEquityMap" target="_blank">View on GitHub</a>
     </div>
 
     <div class="project">
       <h3>Cybersecurity Threat Visualizer</h3>
-      <p>Python and Flask-based dashboard that visualizes real-time cyber threat feeds and highlights critical vulnerabilities using CVE feeds and analytics.</p>
+      <p>
+        Python and Flask-based dashboard that visualizes real-time cyber threat
+        feeds and highlights critical vulnerabilities using CVE feeds and
+        analytics.
+      </p>
       <a href="https://github.com/AlexMutune/CyberThreatVisualizer" target="_blank">View on GitHub</a>
     </div>
 
     <div class="project">
       <h3>SPSS Regression Toolkit</h3>
-      <p>Automates statistical regression analysis workflows using Python, SPSS scripting, and LaTeX export features. Useful for research-heavy academic tasks.</p>
+      <p>
+        Automates statistical regression analysis workflows using Python, SPSS
+        scripting, and LaTeX export features. Useful for research-heavy academic
+        tasks.
+      </p>
       <a href="https://github.com/AlexMutune/SPSS-Toolkit" target="_blank">View on GitHub</a>
     </div>
 
     <div class="project">
       <h3>Globalization Interactive Map</h3>
-      <p>Web-based visualization platform that illustrates personal and community impacts of globalization through a narrative map. Built using Leaflet.js and custom GeoJSON layers.</p>
+      <p>
+        Web-based visualization platform that illustrates personal and community
+        impacts of globalization through a narrative map. Built using Leaflet.js
+        and custom GeoJSON layers.
+      </p>
       <a href="https://github.com/AlexMutune/GlobalizationMap" target="_blank">View on GitHub</a>
     </div>
   </section>
@@ -76,15 +102,18 @@
   <section id="contact" class="container">
     <h2>Contact Me</h2>
     <form class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
   <footer>
-    &copy; 2025 Alex Mutune | Connect on <a href="https://www.linkedin.com/in/alex-mutune-17b7111a0/" target="_blank">LinkedIn</a>
+    <p>
+      &copy; 2025 Alex Mutune |
+      <a href="https://www.linkedin.com/in/alex-mutune-17b7111a0/" target="_blank">LinkedIn</a>
+    </p>
   </footer>
 </body>
 

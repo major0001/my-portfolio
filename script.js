@@ -1,61 +1,33 @@
-// script.js
+// Dark Mode Toggle
+const toggleButton = document.createElement('button');
+toggleButton.textContent = "🌙";
+toggleButton.classList.add('dark-toggle');
+document.body.appendChild(toggleButton);
 
-// Typewriter effect for intro
-const typedText = document.getElementById("typed");
-const phrases = ["Software Engineer", "Data Enthusiast", "Cybersecurity Learner"];
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let speed = 100;
+toggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  toggleButton.textContent = document.body.classList.contains('dark-mode') ? "☀️" : "🌙";
+});
 
-function type() {
-  const currentPhrase = phrases[phraseIndex];
-  const visibleText = currentPhrase.substring(0, charIndex);
-  typedText.textContent = visibleText;
+// Typing Animation
+const typedText = "Software Engineer | Data Enthusiast | Cybersecurity Learner";
+let index = 0;
+const typedDiv = document.getElementById("typed");
 
-  if (!isDeleting) {
-    if (charIndex < currentPhrase.length) {
-      charIndex++;
-      speed = 100;
-    } else {
-      isDeleting = true;
-      speed = 1500;
-    }
-  } else {
-    if (charIndex > 0) {
-      charIndex--;
-      speed = 50;
-    } else {
-      isDeleting = false;
-      phraseIndex = (phraseIndex + 1) % phrases.length;
-      speed = 500;
-    }
+function typeEffect() {
+  if (index < typedText.length) {
+    typedDiv.textContent += typedText.charAt(index);
+    index++;
+    setTimeout(typeEffect, 60);
   }
-
-  setTimeout(type, speed);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  type();
-});
+document.addEventListener("DOMContentLoaded", typeEffect);
 
-// Smooth scroll for nav links
-document.querySelectorAll('.nav-links a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop - 60,
-        behavior: 'smooth'
-      });
-    }
-  });
-});
-
-// Form submission handler (frontend only)
-document.querySelector('.contact-form').addEventListener('submit', function (e) {
+// Contact Form Submission (mock)
+const form = document.querySelector(".contact-form");
+form.addEventListener("submit", function (e) {
   e.preventDefault();
-  alert("Thank you! Your message has been sent.");
-  this.reset();
+  alert("Message sent successfully! Thank you.");
+  form.reset();
 });
