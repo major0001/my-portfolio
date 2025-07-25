@@ -1,71 +1,61 @@
-// Typing effect
+// script.js
+
+// Typewriter effect for intro
 const typedText = document.getElementById("typed");
-const phrases = [
-  "Full-Stack Developer",
-  "Data Enthusiast",
-  "Cybersecurity Learner",
-  "Creative Technologist",
-];
+const phrases = ["Software Engineer", "Data Enthusiast", "Cybersecurity Learner"];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-let typingSpeed = 100;
+let speed = 100;
 
 function type() {
   const currentPhrase = phrases[phraseIndex];
-  if (isDeleting) {
-    typedText.textContent = currentPhrase.substring(0, charIndex--);
+  const visibleText = currentPhrase.substring(0, charIndex);
+  typedText.textContent = visibleText;
+
+  if (!isDeleting) {
+    if (charIndex < currentPhrase.length) {
+      charIndex++;
+      speed = 100;
+    } else {
+      isDeleting = true;
+      speed = 1500;
+    }
   } else {
-    typedText.textContent = currentPhrase.substring(0, charIndex++);
+    if (charIndex > 0) {
+      charIndex--;
+      speed = 50;
+    } else {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      speed = 500;
+    }
   }
 
-  if (!isDeleting && charIndex === currentPhrase.length) {
-    isDeleting = true;
-    setTimeout(type, 1200); // Pause at full word
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    phraseIndex = (phraseIndex + 1) % phrases.length;
-    setTimeout(type, 300);
-  } else {
-    setTimeout(type, isDeleting ? 60 : typingSpeed);
-  }
+  setTimeout(type, speed);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   type();
 });
 
-// Smooth scroll
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', function (e) {
+// Smooth scroll for nav links
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({
+        top: target.offsetTop - 60,
+        behavior: 'smooth'
+      });
     }
   });
 });
 
-// Contact form behavior
-document.querySelector(".contact-form").addEventListener("submit", function (e) {
+// Form submission handler (frontend only)
+document.querySelector('.contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
-  alert("Thanks for reaching out! I'll get back to you soon.");
+  alert("Thank you! Your message has been sent.");
   this.reset();
-});
-
-// Fade-in on scroll
-const faders = document.querySelectorAll('section');
-
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('visible');
-    observer.unobserve(entry.target);
-  });
-}, {
-  threshold: 0.1,
-});
-
-faders.forEach(section => {
-  appearOnScroll.observe(section);
 });
