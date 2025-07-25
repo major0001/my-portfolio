@@ -1,41 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Wambua | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Mutune | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section class="hero">
-    <img src="assets/profile.jpg" alt="Alex Wambua" class="profile-img" />
-    <div class="intro-text">
-      <h1>Alex Wambua</h1>
-      <h2>Full-Stack Developer & Data Engineer</h2>
-      <p>Building modern web apps and smart data solutions.</p>
-      <a href="#projects" class="cta-button">View My Work</a>
-    </div>
+  <header>
+    <nav>
+      <h1>Alex Mutune</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <img src="assets/profile.jpg" alt="Alex Mutune Photo" />
+    <h2>Full-Stack Developer | Data Engineer | Network & Database Specialist</h2>
+    <p>Building reliable systems and smart AI tools that make tech work for people.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a detail-oriented full-stack developer and data engineer with hands-on experience designing web apps, managing cloud infrastructure, and training AI systems. My background combines strong programming skills with a passion for solving complex data problems. I specialize in Python, JavaScript, SQL, cloud services, and network/database optimization. I enjoy contributing to open-source projects and mentoring junior developers.</p>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>E-commerce Website (ALX Project)</h3>
-      <p>MERN stack project with user authentication, product catalog, cart and Razorpay integration.</p>
-      <a href="https://github.com/major0001/E-commerce_Website-ALX-Project" target="_blank">View on GitHub</a>
+    <h2>Featured Projects</h2>
+    <div class="project">
+      <h3>1. Crypto Dashboard</h3>
+      <p>Real-time cryptocurrency price tracker using React.js and CoinGecko API.</p>
     </div>
-    <div class="project-card">
-      <h3>BooKAH Library System</h3>
-      <p>Library management system using PHP and MySQL. Includes CRUD operations and authentication.</p>
-      <a href="https://github.com/major0001" target="_blank">View on GitHub</a>
+    <div class="project">
+      <h3>2. Smart Budget Tracker</h3>
+      <p>Personal finance tool built with Flask and PostgreSQL. Includes analytics and visual reports.</p>
+    </div>
+    <div class="project">
+      <h3>3. AI Chat Interface</h3>
+      <p>Interactive chatbot interface trained with custom logic for task automation.</p>
+    </div>
+    <div class="project">
+      <h3>4. Network Health Monitor</h3>
+      <p>Monitors and logs server uptime and packet loss. Built with Bash, Python, and Grafana.</p>
+    </div>
+    <div class="project">
+      <h3>5. GitHub Actions CI/CD</h3>
+      <p>Custom GitHub Actions workflows to automate build/test/deploy for microservices.</p>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: alex.wambua@email.com</p>
+    <h2>Contact Me</h2>
+    <form action="#" method="post">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
-  <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 Alex Mutune. All rights reserved.</p>
+  </footer>
 </body>
 </html>
